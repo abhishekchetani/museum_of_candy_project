@@ -20,11 +20,16 @@
 </head>
 
 <body>
+  <!-- Navbar expands after Medium Breakpoint, is Fixed at Top & has Zero Vertical Padding -->
   <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top">
+    <!-- Brand / Logo -->
     <a href="#" class="navbar-brand">CANDY</a>
+    <!-- Navbar Collapser on Smaller Devices -->
+    <!-- Aria-label for Accessibility Features (Screen Reader) -->
     <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle Navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <!-- Giving an ID to Target Navbar -->
     <div class="collapse navbar-collapse" id="navLinks">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -40,9 +45,13 @@
     </div>
   </nav>
 
+  <!-- Full Width Container with Zero Horizontal Padding -->
   <section class="container-fluid px-0">
+    <!-- Aligning Items Vertically in Row -->
     <div class="row align-items-center">
+      <!-- Columns are Stacked but Divides in Half afer Large Breakpoint -->
       <div class="col-lg-6">
+        <!-- Text starts to Dispay after Large Breakpoint & has little Top Margin -->
         <div id="headingGroup" class="text-center text-white d-none d-lg-block mt-5">
           <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
           <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
@@ -54,6 +63,7 @@
         </div>
       </div>
       <div class="col-lg-6">
+        <!-- Making Image Responsive (max-width:100 & height: auto) -->
         <img class="img-fluid" src="imgs/hand2.png" alt="">
       </div>
     </div>
@@ -61,13 +71,20 @@
 
   <section class="container-fluid px-0">
     <div class="row align-items-center content">
+      <!-- Column is Stacked but Halves after Medium Breakpoint-->
+      <!-- Image appears after Text but before Text after hitting Medium Breakpoint -->
       <div class="col-md-6 order-2 order-md-1">
         <img src="imgs/milk.png" alt="" class="img-fluid">
       </div>
+      <!-- Reordering Text at Medium Breakpoint -->
       <div class="col-md-6 text-center order-1 order-md-2">
+        <!-- Adding New Row & Centering Text Horizontally -->
         <div class="row justify-content-center">
+          <!-- New Column for Text taking 10/12 Units & 8/12 Units after Large Breakpoint  -->
+          <!-- Little Bottom Margin which Vanishes after Medium Breakpoint -->
           <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
             <h2>MUSEUM OF CANDY</h2>
+            <!-- Icon Displays only after hitting Large Breakpoint -->
             <img src="imgs/lolli_icon.png" alt="" class="d-none d-lg-inline">
             <p class="lead">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quibusdam, ipsa voluptatum dolores pariatur
@@ -127,28 +144,24 @@
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+  </script>
 
-  <!-- <script>
-    $(function () {
-      $(document).scroll(function () {
-        var $nav = $("#mainNavbar");
-        $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
-      });
-    });
-  </script> -->
+  <!-- JS for Scrolling Navbar Effect -->
   <script>
     $(function () {
+      // Detecting Document (Body) Scroll Event
       $(document).scroll(function () {
-        var $nav = $("#mainNavbar");
-        $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+          // Selecting the Navbar
+          var $nav = $("#mainNavbar");
+          // Scrolling past the Navbar Height Toggles .scrolled Class
+          $nav.toggleClass("scrolled", $(this).scrollTop()) > $nav.height());
       });
     });
   </script>
